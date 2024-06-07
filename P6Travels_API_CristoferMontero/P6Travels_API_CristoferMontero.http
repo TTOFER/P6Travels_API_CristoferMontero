@@ -1,0 +1,6 @@
+@P6Travels_API_CristoferMontero_HostAddress = http://localhost:5118
+
+GET {{P6Travels_API_CristoferMontero_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
