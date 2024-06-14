@@ -40,12 +40,11 @@ public partial class P620242travelsContext : DbContext
 
     }
 
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Country>(entity =>
         {
-            entity.HasKey(e => e.CountryId).HasName("PK__Country__10D160BF26EEC2D8");
+            entity.HasKey(e => e.CountryId).HasName("PK__Country__10D160BF269BE299");
 
             entity.ToTable("Country");
 
@@ -57,7 +56,7 @@ public partial class P620242travelsContext : DbContext
 
         modelBuilder.Entity<Destination>(entity =>
         {
-            entity.HasKey(e => e.DestionationId).HasName("PK__Destinat__12F2541F4F2DCAC9");
+            entity.HasKey(e => e.DestionationId).HasName("PK__Destinat__12F2541FA29B705D");
 
             entity.ToTable("Destination");
 
@@ -75,7 +74,7 @@ public partial class P620242travelsContext : DbContext
 
         modelBuilder.Entity<Hosting>(entity =>
         {
-            entity.HasKey(e => e.HostingId).HasName("PK__Hosting__B2C2DF84C954FA13");
+            entity.HasKey(e => e.HostingId).HasName("PK__Hosting__B2C2DF847B765E93");
 
             entity.ToTable("Hosting");
 
@@ -102,7 +101,7 @@ public partial class P620242travelsContext : DbContext
 
         modelBuilder.Entity<Reservation>(entity =>
         {
-            entity.HasKey(e => e.ReservationId).HasName("PK__Reservat__B7EE5F04B6ACDE50");
+            entity.HasKey(e => e.ReservationId).HasName("PK__Reservat__B7EE5F043DBFCD8D");
 
             entity.ToTable("Reservation");
 
@@ -128,7 +127,7 @@ public partial class P620242travelsContext : DbContext
 
         modelBuilder.Entity<Schedule>(entity =>
         {
-            entity.HasKey(e => e.ActivityId).HasName("PK__Schedule__45F4A7F1A1D05D3B");
+            entity.HasKey(e => e.ActivityId).HasName("PK__Schedule__45F4A7F1CE360CEB");
 
             entity.ToTable("Schedule");
 
@@ -150,7 +149,7 @@ public partial class P620242travelsContext : DbContext
 
         modelBuilder.Entity<Tour>(entity =>
         {
-            entity.HasKey(e => e.TourId).HasName("PK__Tour__604CEA10F0FDF31E");
+            entity.HasKey(e => e.TourId).HasName("PK__Tour__604CEA104F6A23FB");
 
             entity.ToTable("Tour");
 
@@ -172,7 +171,7 @@ public partial class P620242travelsContext : DbContext
 
         modelBuilder.Entity<Transport>(entity =>
         {
-            entity.HasKey(e => e.TransportId).HasName("PK__Transpor__19E9A17DE697C2CB");
+            entity.HasKey(e => e.TransportId).HasName("PK__Transpor__19E9A17D6C6D763E");
 
             entity.ToTable("Transport");
 
@@ -184,7 +183,7 @@ public partial class P620242travelsContext : DbContext
 
         modelBuilder.Entity<Travel>(entity =>
         {
-            entity.HasKey(e => e.TravelId).HasName("PK__Travel__E93152154BE8D60C");
+            entity.HasKey(e => e.TravelId).HasName("PK__Travel__E93152150CC591FB");
 
             entity.ToTable("Travel");
 
@@ -216,7 +215,7 @@ public partial class P620242travelsContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__User__1788CCAC5207DC8A");
+            entity.HasKey(e => e.UserId).HasName("PK__User__1788CCACCB5BD523");
 
             entity.ToTable("User");
 
@@ -243,7 +242,7 @@ public partial class P620242travelsContext : DbContext
 
         modelBuilder.Entity<UserRole>(entity =>
         {
-            entity.HasKey(e => e.UserRoleId).HasName("PK__UserRole__3D978A5556E418A2");
+            entity.HasKey(e => e.UserRoleId).HasName("PK__UserRole__3D978A55C16676DC");
 
             entity.ToTable("UserRole");
 
