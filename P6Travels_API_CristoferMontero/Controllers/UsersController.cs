@@ -135,6 +135,33 @@ namespace P6Travels_API_CristoferMontero.Controllers
             return CreatedAtAction("GetUser", new { id = user.UserId }, user);
         }
 
+        //POST: De ingreso desde la APP con DTO
+        [HttpPost("AddUserFromApp")]
+        public async Task<ActionResult<UsuarioDTO>> AddUserFromApp(UsuarioDTO user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            //mapeo manual para transfomar DTO a modelo nativo
+            User NuevoUsuarioNativo = new()
+            {
+                Email = user.Correo,
+                Name = user.Nombre,
+                PhoneNumber = user.Telefono,
+                LoginPassword = user.Contrasennia,
+                UserRoleId = user.RolID,
+                UserRole = null
+            };
+
+            _context.Users.Add(NuevoUsuarioNativo);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetUser", new { id = NuevoUsuarioNativo.UserId }, NuevoUsuarioNativo);
+        }
+
+
         // DELETE: api/Users/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)

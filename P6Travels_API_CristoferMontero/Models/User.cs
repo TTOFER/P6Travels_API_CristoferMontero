@@ -19,5 +19,5 @@ public partial class User
 
     public virtual ICollection<Tour> Tours { get; set; } = new List<Tour>();
 
-    public virtual UserRole UserRole { get; set; } = null!;
+    public virtual UserRole? UserRole { get; set; } = null!;
 }
